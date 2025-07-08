@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WXZ星辰之海</title>
+  <link rel="stylesheet" href="/myweb2/style.css">
+</head>
+<body>
+  <header class="glass">
+    <h1>WXZ星辰之海</h1>
+    <nav>
+      <a href="#about" class="glass-btn">关于我</a>
+      <a href="#contact" class="glass-btn">联系方式</a>
+      <a href="#works" class="glass-btn">我的作品</a>
+      <button id="toggle-dark" class="glass-btn">夜间模式</button>
+    </nav>
+  </header>
+  <main>
+    <section id="about" class="glass card">
+      <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+        <img src="https://q1.qlogo.cn/g?b=qq&nk=3667459115&s=640" alt="头像" style="width:90px;height:90px;border-radius:50%;box-shadow:0 2px 12px rgba(0,0,0,0.10);border:4px solid rgba(255,255,255,0.5);">
+        <div>
+          <h2 style="margin:0;">关于我</h2>
+          <p style="margin:0.5em 0 0 0;">你好！我是来自中国广西的个人开发者，热爱编程与分享。欢迎来到我的个人博客！</p>
+          <div style="margin-top:0.5em;font-style:italic;color:#0078d7;">“星辰大海，逐梦前行”</div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="glass card">
+      <h2>技能与兴趣</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:0.7em;">
+        <span class="tag-glass">HTML</span>
+        <span class="tag-glass">CSS</span>
+        <span class="tag-glass">Python</span>
+        <span class="tag-glass">Windows工具</span>
+        <span class="tag-glass">Minecraft</span>
+        <span class="tag-glass">刷机</span>
+        <span class="tag-glass">音乐</span>
+        <span class="tag-glass">分享</span>
+      </div>
+    </section>
+    <section id="time-weather" class="glass card">
+      <h2>时间与天气</h2>
+      <div style="display:flex;align-items:center;gap:1.5em;flex-wrap:wrap;">
+        <div style="font-size:1.3em;">
+          <span>中国广西</span> <span>🌤️</span>
+        </div>
+        <div style="font-size:1.1em;">北京时间：<span id="now-time">2024-06-09 12:00</span></div>
+        <div style="font-size:1em;color:#888;">（天气为示意，非实时）</div>
+      </div>
+    </section>
+    <section id="contact" class="glass card">
+      <h2>联系方式</h2>
+      <ul>
+        <li>QQ：3667459115 <a href="tencent://message/?uin=3667459115" class="icon-btn" title="QQ"><img src="https://img.icons8.com/color/48/000000/qq.png" alt="QQ"/></a></li>
+        <li>邮箱：liangqin177@163.com <a href="mailto:liangqin177@163.com" class="icon-btn" title="邮箱"><img src="https://img.icons8.com/color/48/000000/email.png" alt="邮箱"/></a></li>
+        <li>所在地：中国广西 <span class="icon-btn"><img src="https://img.icons8.com/color/48/000000/china.png" alt="中国"/></span></li>
+      </ul>
+    </section>
+    <section id="works" class="glass card">
+      <h2>我的作品</h2>
+      <div class="works-list" style="display:flex;gap:1.5em;flex-wrap:wrap;">
+        <div class="work-card glass">
+          <div style="font-weight:bold;font-size:1.1em;">Flash Root Box</div>
+          <div style="margin:0.5em 0 1em 0;color:#666;">一键ROOT工具箱，适用于部分安卓设备。</div>
+          <a href="https://github.com/Windowshello2/Flash-Root-Box" target="_blank" class="glass-btn work-btn">访问项目</a>
+        </div>
+        <!-- 可扩展更多作品 -->
+      </div>
+    </section>
+    <section id="guestbook" class="glass card">
+      <h2>留言板</h2>
+      <p>欢迎留言交流想法与建议！</p>
+      <a href="#" class="glass-btn">进入留言板</a>
+    </section>
+    <section id="more" class="glass card">
+      <h2>更多功能</h2>
+      <ul>
+        <li>夜间模式切换</li>
+        <li>玻璃风格按钮与卡片</li>
+        <li>响应式设计，手机/电脑自适应</li>
+        <li>社交信息展示</li>
+        <li>技能标签与兴趣展示</li>
+        <li>留言板入口</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="glass">
+    <p>&copy; 2024 WXZ星辰之海 | 由AI助力生成 | <a href="https://beian.miit.gov.cn/" target="_blank" style="color:#0078d7;text-decoration:underline;">ICP备案</a></p>
+  </footer>
+  <script>
+    // 夜间模式切换
+    const btn = document.getElementById('toggle-dark');
+    btn.onclick = function() {
+      document.body.classList.toggle('dark');
+    };
+  </script>
+</body>
+</html> 
