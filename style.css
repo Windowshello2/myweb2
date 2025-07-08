@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  transition: background 0.5s;
+}
+
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin: 1rem auto;
+  max-width: 900px;
+  border-radius: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card {
+  padding: 2rem;
+}
+
+.glass-btn {
+  display: inline-block;
+  padding: 0.7em 1.5em;
+  margin: 0.2em;
+  font-size: 1rem;
+  color: #222;
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.10);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+
+.glass-btn:hover, .glass-btn:focus {
+  background: rgba(255,255,255,0.55);
+  color: #0078d7;
+  box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.18);
+}
+
+.work-btn {
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+/* 玻璃风格标签 */
+.tag-glass {
+  display: inline-block;
+  padding: 0.3em 1em;
+  margin: 0.1em 0.2em;
+  background: rgba(255,255,255,0.35);
+  border-radius: 999px;
+  font-size: 0.98em;
+  color: #0078d7;
+  font-weight: 500;
+  box-shadow: 0 2px 8px 0 rgba(31,38,135,0.08);
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.3s, color 0.3s;
+}
+.tag-glass:hover {
+  background: rgba(255,255,255,0.55);
+  color: #005fa3;
+}
+
+/* 作品卡片 */
+.work-card {
+  min-width: 220px;
+  max-width: 300px;
+  padding: 1.2em 1em 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(31,38,135,0.10);
+  margin-bottom: 1em;
+}
+
+/* 社交图标按钮 */
+.icon-btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 2px 8px 0 rgba(31,38,135,0.08);
+  padding: 0.2em;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.icon-btn img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.icon-btn:hover {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 4px 16px 0 rgba(31,38,135,0.18);
+}
+
+/* 分割线美化 */
+.card:not(:last-child) {
+  border-bottom: 1.5px solid rgba(0,0,0,0.04);
+}
+
+/* 页脚链接美化 */
+footer a {
+  color: #0078d7;
+  text-decoration: underline;
+  margin-left: 0.5em;
+  font-size: 0.98em;
+}
+footer a:hover {
+  color: #005fa3;
+}
+
+@media (max-width: 600px) {
+  header, footer, main {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+  .card {
+    padding: 1rem;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+body.dark {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+body.dark .glass {
+  background: rgba(40, 44, 52, 0.35);
+  color: #f1f1f1;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+body.dark .glass-btn {
+  background: rgba(40,44,52,0.45);
+  color: #f1f1f1;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+body.dark .glass-btn:hover, body.dark .glass-btn:focus {
+  background: rgba(40,44,52,0.65);
+  color: #4fc3f7;
+} 
+
+/* 夜间模式适配新元素 */
+body.dark .tag-glass {
+  background: rgba(40,44,52,0.45);
+  color: #4fc3f7;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+body.dark .tag-glass:hover {
+  background: rgba(40,44,52,0.65);
+  color: #fff;
+}
+body.dark .work-card {
+  background: rgba(40,44,52,0.35);
+  color: #f1f1f1;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+body.dark .icon-btn {
+  background: rgba(40,44,52,0.45);
+}
+body.dark .icon-btn:hover {
+  background: rgba(40,44,52,0.65);
+} 
